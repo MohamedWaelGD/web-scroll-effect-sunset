@@ -1,1 +1,299 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+h1,
+span,
+p {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+body {
+  background-color: #1e2049;
+}
+
+section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-sunset {
+  background: linear-gradient(
+    181deg,
+    #6d4869 -4.47%,
+    #906074 5.09%,
+    #d58480 18.15%,
+    #eca58b 34.03%,
+    #f8c995 69.69%
+  );
+}
+
+.lets-start {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9999;
+
+  button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 12px;
+    padding: 12px 48px;
+    background: rgba(65, 0, 22, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+#hero-text {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#cloud-1 {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+}
+
+#cloud-2 {
+  position: absolute;
+  top: 8%;
+  right: 0;
+}
+
+#cloud-3 {
+  position: absolute;
+  top: 15%;
+  left: 0;
+}
+
+#cloud-4 {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+}
+
+#sun {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 18%);
+}
+
+.mountains svg {
+  transform: translateY(22.5%);
+}
+
+#mountain-1 {
+  position: absolute;
+  bottom: 0;
+}
+
+#mountain-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#mountain-3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#mountain-4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#mountain-5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#mountain-6 {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+}
+
+#mountain-7 {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+}
+
+#mountain-8 {
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+}
+
+#mountain-9 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#mountain-10 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#sun-set-text {
+  position: absolute;
+  bottom: 23%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#trees {
+  position: absolute;
+  bottom: 0;
+  transform: scale(1.1);
+}
+
+.more-sun-set {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.more-sun-set span {
+  color: white;
+  letter-spacing: 0.8rem;
+}
+
+.grid-container {
+  padding: 350px 200px;
+  padding-bottom: 0px;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 50px;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 567px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.grid-item {
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .img {
+    content: "";
+    width: 100%;
+    object-fit: cover;
+    flex-grow: 1;
+    transition: 0.2s;
+  }
+}
+
+.item:hover .img {
+  background-size: 100%;
+  background-position: top top;
+}
+
+.item:hover .filter-back {
+  height: 100px;
+}
+
+.filter-back {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(40px);
+  height: 0px;
+  transition: 0.2s;
+  position: relative;
+  overflow: hidden;
+
+  p {
+    position: absolute;
+    padding: 1rem;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    text-align: start;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.card-1 {
+  background: url("/assets/imgs/pic-1.png");
+  background-size: 135%;
+  background-position: bottom bottom;
+  background-repeat: no-repeat;
+}
+
+.card-2 {
+  background: url("/assets/imgs/pic-2.png");
+  background-size: 135%;
+  background-position: bottom bottom;
+  background-repeat: no-repeat;
+}
+
+.card-3 {
+  background: url("/assets/imgs/pic-3.png");
+  background-size: 135%;
+  background-position: bottom bottom;
+  background-repeat: no-repeat;
+}
+
+.card-4 {
+  background: url("/assets/imgs/pic-4.png");
+  background-size: 135%;
+  background-position: bottom bottom;
+  background-repeat: no-repeat;
+}
